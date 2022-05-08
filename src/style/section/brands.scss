@@ -1,0 +1,22 @@
+.brands {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: $color-black-secondary;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    @include media-from(991) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include media-from(1440) {
+      flex-wrap: nowrap;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.info {
+  background-image: url("../img/info/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  color: $color-white;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

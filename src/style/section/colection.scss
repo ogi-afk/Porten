@@ -1,0 +1,79 @@
+.colection {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media-from(1440) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__card {
+    background-color: $color-black-primary;
+
+    padding: 20px 15px;
+    @include media-from(1400) {
+      padding: 93px 80px;
+    }
+
+    &--1 {
+      @include media-from(1440) {
+        grid-column: 1/5;
+      }
+    }
+
+    &--2 {
+      background-image: url("../img/colection/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      @include media-from(576) {
+        min-height: 600px;
+      }
+
+      @include media-from(1440) {
+        grid-column: 5/-1;
+      }
+    }
+
+    &--3 {
+      background-image: url("../img/colection/bg-2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-width: 280px;
+      min-height: 280px;
+      @include media-from(576) {
+        min-height: 600px;
+      }
+
+      @include media-from(1440) {
+        min-width: 680px;
+        min-height: 600px;
+        grid-column: 1/4;
+      }
+      @include media-from(1920) {
+        min-width: 880px;
+      }
+    }
+    &--4 {
+      display: flex;
+      flex-direction: column;
+      @include media-from(1440) {
+        grid-column: 6/-1;
+      }
+    }
+  }
+  &__colection {
+    margin: 0 auto;
+    @include media-from(991) {
+      display: flex;
+      gap: 50px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.footer {
+  padding-top: 50px;
+
+  background-image: url("../img/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  @include media-from(1440) {
+    text-align: start;
+  }
+
+  &__list {
+    @include media-from(1440) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 31px;
+    }
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    @include media-from(1440) {
+      justify-content: start;
+    }
+  }
+
+  &__item {
+    padding: 10px 20px;
+    background-color: $color-black-secondary;
+    display: inline-block;
+  }
+
+  &__text-item {
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-grey-secondary;
+  }
+
+  &__block {
+    @include media-from(1440) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 37px;
+    }
+  }
+
+  &__input {
+    background-color: $color-grey-tertiaty;
+    padding: 15px 20px;
+    border: none;
+    margin-bottom: 10px;
+
+    max-width: 210px;
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+  &__wrapper {
+    margin-top: 50px;
+    color: $color-white;
+    background-color: $color-black-primary;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  &__figma {
+    @include media-from(1440) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

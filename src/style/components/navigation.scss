@@ -1,0 +1,28 @@
+.navigation {
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-grey-secondary;
+  display: none;
+
+  @include media-from(576) {
+    display: block;
+  }
+
+  @include media-from(991) {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include media-from(991) {
+      gap: 40;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+  }
+}

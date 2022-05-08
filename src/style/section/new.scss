@@ -1,0 +1,26 @@
+.new {
+  padding-top: 60px;
+  padding-bottom: 70px;
+
+  @include media-from(1440) {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  &__collection {
+    @include media-from(576) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-from(991) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media-from(1440) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 23px;
+    }
+  }
+}
